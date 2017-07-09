@@ -1,0 +1,56 @@
+#header {
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+}
+#header {
+    color: #FFFFFF;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    width: inherit;
+    height: auto !important;
+}
+#branding {
+    margin: 0 auto;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+}
+#site-title {
+    margin: 0 0 3%;
+    text-align: center;
+    line-height: 26px;
+
+}
+
+h1 {
+    display: block;
+    font-size: 40px;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+
+}
+#site-description {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0;
+    color: #490D22;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+}
+
+h2 {
+    display: block;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
