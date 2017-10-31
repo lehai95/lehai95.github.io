@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+   <div ng-app="" ng-controller="cntryController">
+    <input list="testList" type="" ng-model="SelectedDoctor" ng-change="LoadSessionData(SelectedDoctor)" />
+    <datalist id="testList">
+        <option value="Dr.Test1" ng-selected="selected"></option>
+        <option value="Dr.Test2"></option>
+        <option value="Dr.Test2"></option>
+    </datalist>
+</div>
+    </body>
+<script src="jquery/js.js"></script>
+<script src="app/angular.min.js"></script>
+</html>
