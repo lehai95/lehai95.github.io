@@ -7,15 +7,15 @@
 <link rel="stylesheet" href="style\index style.css">
 <link rel="stylesheet" href="library/bootstrap/dist/css/bootstrap.min.css">
     </head>
-        <body>
+        <body ng-app="myApp" ng-controller="myCtrl">
         <h1>Enployees Management</h1>
         <div class="btn-toolbar container-fluid">
-    <button class="btn btn-primary">Add New User <span class="glyphicon glyphicon-plus"></span></button>
+    <button class="btn btn-primary" id="addNew" data-target="#addNew" ng-click="showAdd(x.id)">Add New User <span class="glyphicon glyphicon-plus"></span></button>
     <button class="btn">Import</button>
     <button class="btn">Export</button>
     <br>
 </div>
-<div class="well" ng-app="myApp" ng-controller="myCtrl">
+<div class="well" >
     <table class="table">
       <thead>
         <tr>
@@ -71,6 +71,45 @@
     </div>
 </div>
 <!---------------------- Nhay so trang ---------------------->
+
+<!-- =================== Add New ========================= -->
+
+<div class="modal" tabindex="-1" role="dialog" id="addNew">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Data of member:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="form-group">
+        <form>
+    <label>Name:</label>
+    <input type="text" name="firstname" class="span3" >
+     <br>
+    <label>Email Address</label>
+    <input type="email" name="email" class="span3" >
+     <br>
+    <label>Contact</label>
+    <input type="text" name="contact" class="span3" >
+     <br>
+    <label>Position</label>
+    <input type="position" name="position" class="span3" >
+    </form>
+
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =================== Add New ========================= -->
 
 <!-- +++++++++++++form detail ++++++++++++++++++-->
 <div class="modal" tabindex="-1" role="dialog" id="showData1">

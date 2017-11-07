@@ -10,6 +10,11 @@ app.controller('myCtrl', function($scope) {
         {id:2, name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"},
         {id:3, name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"},
     ];
+    /* add info */
+     $scope.showAdd = function(id) {
+
+        $("#addNew").modal("show");
+      };
     /* detail form */
       $scope.showData = function(id) {
         $scope.data={ name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"};
@@ -25,6 +30,6 @@ app.controller('myCtrl', function($scope) {
    $("#deleteConfirm").modal("show");  
   };
   /* Delete after confirm */
-  
+
 });
 
