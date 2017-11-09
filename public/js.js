@@ -9,10 +9,12 @@ app.controller('myCtrl', function($scope) {
         {id:1, name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"},
         {id:2, name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"},
         {id:3, name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"},
+        {id:4, name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"},
+        {id:5, name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"},
     ];
     /* add info */
      $scope.showAdd = function(id) {
-
+       $scope.data1 = { name: "type your name", email: "type your email", contact: "type your contact number", position: "type your position"};
         $("#addNew").modal("show");
       };
     /* detail form */
@@ -25,11 +27,20 @@ app.controller('myCtrl', function($scope) {
         $scope.edit = { name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"};
    $("#showEdit1").modal("show");  
   };
+  /* Save change */
+$scope.reload = function(id)
+{
+   location.reload(); 
+};
   /* confirm pop up */
    $scope.showConfirm = function(id) {
    $("#deleteConfirm").modal("show");  
   };
   /* Delete after confirm */
+$scope.reload1 = function(id)
+{
+   location.reload(); 
+};
 
 });
 
