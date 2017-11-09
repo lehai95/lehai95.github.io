@@ -4,18 +4,47 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+               
+<!-- Latest compiled and minified JavaScript -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" media="all">
+<link rel="stylesheet" href="style\index style.css">
+<link rel="stylesheet" href="library/bootstrap/dist/css/bootstrap.min.css">
     </head>
     <body>
-   <div ng-app="" ng-controller="cntryController">
-    <input list="testList" type="" ng-model="SelectedDoctor" ng-change="LoadSessionData(SelectedDoctor)" />
-    <datalist id="testList">
-        <option value="Dr.Test1" ng-selected="selected"></option>
-        <option value="Dr.Test2"></option>
-        <option value="Dr.Test2"></option>
-    </datalist>
+    <div class="well" >
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>Position</th>
+          <th><span class="glyphicon glyphicon-cogwheels"></span></th>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in info">
+          <td><a href="" ng-click="showData(x.id)">{{x.id}}</a></td>
+          <td>{{x.name}}</td>
+          <td>{{x.email}}</td>
+          <td>{{x.contact}}</td>
+          <td>{{x.position}}</td>
+          <td>
+              <button type="button" class="btn btn-primary btn-md" data-target="#showEdit1"  id="edit" ng-click="showEdit(x.id)"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+              <button type="button" class="btn btn-danger" id="delete" data-target="#deleteConfirm" ng-click="showConfirm(x.id)"><span class="glyphicon glyphicon-remove" > Delete</span>
+          </td>
+        </tr>
+  
 </div>
+      </tbody>
+    </table>
+
     </body>
-<script src="jquery/js.js"></script>
-<script src="app/angular.min.js"></script>
+    <script src="library/jquery/dist/jquery.min.js"></script>  
+<script src="library/angular/angular.min.js"></script>
+<script src="library/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js.js"></script>
 </html>
