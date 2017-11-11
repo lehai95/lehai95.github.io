@@ -33,7 +33,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="x in info">
+        <tr id="data" ng-repeat="x in employeesList">
           <td><a href="" ng-click="showData(x.id)">{{x.id}}</a></td>
           <td>{{x.name}}</td>
           <td>{{x.email}}</td>
@@ -126,10 +126,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <label><b>Name:</b><i>{{data.name}}</i></label><br>
-        <label><b>Email:</b><i>{{data.email}}</i></label><br>
-        <label><b>Contact:</b><i>{{data.contact}}</i></label><br>
-        <label><b>Position:</b><i>{{data.position}}</i></label><br>
+        <label><b>Name:</b><i>{{data2.name}}</i></label><br>
+        <label><b>Email:</b><i>{{data2.email}}</i></label><br>
+        <label><b>Contact:</b><i>{{data2.contact}}</i></label><br>
+        <label><b>Position:</b><i>{{data2.position}}</i></label><br>
 
       </div>
       <div class="modal-footer">
