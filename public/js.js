@@ -39,10 +39,15 @@ $scope.data2 = response.data;
 
 });
       /* edit button */
-      $scope.showEdit = function(id) {
-        $scope.edit = { name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"};
-   $("#showEdit1").modal("show");  
-  };
+      $scope.showEdit1 = function(id) {
+        $http({
+            method: 'POST',
+            url: 'http://192.168.1.30:8080/angulara/public/api/v1/employees?page=1' + id,
+        }).then(function myEdit(response) {
+            $scope.edit = response.data;
+        });
+      };
+      $scope.data1   
   /* Save change */
 $scope.reload = function(id)
 {
