@@ -21,15 +21,19 @@ $scope.employeesList = response.data;
 });
 
     /* add info */
-     $scope.showAdd = function(id) {
-       $scope.data1 = { name: "type your name", email: "type your email", contact: "type your contact number", position: "type your position"};
-        $("#addNew").modal("show");
-      };
+     $scope.addNew = function(id) {
+         $http({
+             method: 'POST',
+             url: 'http://192.168.1.30:8080/angulara/public/api/v1/employees?page=1' + id,
+         }).then(function myAdd() {
+            location.reload()
+         });
+     }
     /* detail form */
-     /*$scope.showData = function(id) {
+     $scope.showData = function(id) {
         $scope.data2={ name: "anh", email: "abc123@xyz", contact: "0123456789", position: "abc street"};
         $("#showData1").modal("show");
-      }; */
+      }; 
       /*$http({
 method: "POST",
 url: 'http://192.168.56.1:8080/angulara/public/api/v1/employees?page=1'
@@ -47,7 +51,15 @@ $scope.data2 = response.data;
             $scope.edit = response.data;
         });
       };
-      $scope.data1   
+      $scope.data1 = function (id) {
+          $http({
+              method: 'POST',
+              url: 'http://192.168.1.30:8080/angulara/public/api/v1/employees/' + id,
+          }).then(function myPost(response){
+        location.reload();
+
+        });
+      }   
   /* Save change */
 $scope.reload = function(id)
 {
@@ -64,4 +76,10 @@ $scope.reload1 = function(id)
 };
 
 });
+/* Pagination */
+$scope.pagi = function(id) {
+    $http({
+        
+    })
+}
 
